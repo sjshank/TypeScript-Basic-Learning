@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head><title> TypeScript Modules Example </title>
+  <script src="node_modules/systemjs/dist/system.js"></script>
+  <script src="node_modules/typescript/lib/typescript.js"></script>
+  <script>
+     System.config({
+        transpiler: 'typescript',
+        packages: {
+          src: {
+            defaultExtension: 'js'
+          }
+        } 
+      });
+      System
+        .import('src/main')
+        .then(null, console.error.bind(console));
+  </script>
+  </head>
+  <body>
+	
+	<div style='text-align:center; margin-top:10%'>
+		<h2 id="text1">Person Details</h2>
+		<h3 id="text2"></h3>
+	</div>
+
+    
+  </body>
+</html>
